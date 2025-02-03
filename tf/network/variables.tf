@@ -52,18 +52,3 @@ variable "private_route_table_name" {
   description = "The name tag for the private route table"
   type        = string
 }
-
-variable "cluster_name" {
-  description = "The name of the EKS cluster"
-  type        = string
-}
-
-variable "node_group_name" {
-  description = "The name of the EKS node group"
-  type        = string
-}
-
-variable "fargate_namespace" {
-  description = "The Kubernetes namespace for Fargate"
-  type        = string
-}
