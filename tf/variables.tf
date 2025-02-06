@@ -23,13 +23,23 @@ variable "public_subnet_name" {
   type        = string
 }
 
-variable "private_subnet_cidr" {
-  description = "The CIDR block for the private subnet"
+variable "private_subnet_cidr_a" {
+  description = "The CIDR block for the first private subnet"
   type        = string
 }
 
-variable "private_subnet_name" {
-  description = "The name tag for the private subnet"
+variable "private_subnet_name_a" {
+  description = "The name tag for the first private subnet"
+  type        = string
+}
+
+variable "private_subnet_cidr_b" {
+  description = "The CIDR block for the second private subnet"
+  type        = string
+}
+
+variable "private_subnet_name_b" {
+  description = "The name tag for the second private subnet"
   type        = string
 }
 

@@ -1,5 +1,5 @@
 variable "region" {
-  description = "The AWS region"
+  description = "AWS region"
   type        = string
 }
 
@@ -9,21 +9,21 @@ variable "vpc_id" {
 }
 
 variable "cluster_name" {
-  description = "The name of the EKS cluster"
+  description = "Name of the EKS cluster"
   type        = string
 }
 
 variable "subnet_ids" {
-  description = "The subnet IDs where the EKS cluster will be deployed"
+  description = "List of subnet IDs for EKS cluster and Fargate profile"
   type        = list(string)
 }
 
 variable "node_group_name" {
-  description = "The name of the node group"
+  description = "Name of the Fargate node group"
   type        = string
 }
 
 variable "fargate_namespace" {
-  description = "The Kubernetes namespace to use for Fargate"
+  description = "Kubernetes namespace for Fargate workloads"
   type        = string
 }
