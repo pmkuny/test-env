@@ -49,10 +49,11 @@ module "network" {
 module "eks" {
   source = "./eks"
 
-  cluster_name      = var.cluster_name
-  vpc_id            = module.network.vpc_id
-  subnet_ids        = concat(module.network.private_subnet_ids_a, module.network.private_subnet_ids_b)
-  region            = var.region
-  node_group_name   = var.node_group_name
-  fargate_namespace = var.fargate_namespace
+  cluster_name    = var.cluster_name
+  vpc_id         = module.network.vpc_id
+  subnet_ids     = concat(module.network.private_subnet_ids_a, module.network.private_subnet_ids_b)
+  region         = var.region
+  node_group_name = var.node_group_name
+
+
 }

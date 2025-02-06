@@ -14,16 +14,35 @@ variable "cluster_name" {
 }
 
 variable "subnet_ids" {
-  description = "List of subnet IDs for EKS cluster and Fargate profile"
+  description = "List of private subnet IDs for EKS cluster and node groups"
   type        = list(string)
 }
 
 variable "node_group_name" {
-  description = "Name of the Fargate node group"
+  description = "Name of the EKS node group"
   type        = string
 }
 
-variable "fargate_namespace" {
-  description = "Kubernetes namespace for Fargate workloads"
-  type        = string
+variable "node_group_instance_types" {
+  description = "List of instance types for the EKS node group"
+  type        = list(string)
+  default     = ["t3.medium"]
+}
+
+variable "node_group_desired_size" {
+  description = "Desired number of nodes in the EKS node group"
+  type        = number
+  default     = 2
+}
+
+variable "node_group_max_size" {
+  description = "Maximum number of nodes in the EKS node group"
+  type        = number
+  default     = 4
+}
+
+variable "node_group_min_size" {
+  description = "Minimum number of nodes in the EKS node group"
+  type        = number
+  default     = 1
 }
